@@ -6,6 +6,15 @@
     background-color: #dc2f2f;
 }
 
+a {
+    color: #f5f2f2; /* Altere 'black' para a cor desejada */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+a:hover {
+    color: rgb(215, 213, 213); /* Cor ao passar o mouse */
+}
+
 .carrinho {
     position: fixed; /* Fixa o botão na tela */
     bottom: 20px; /* Distância da parte inferior da janela */
@@ -35,6 +44,7 @@
 .cart-button:active {
     transform: scale(0.9); /* Reduz ligeiramente o botão */
 }
+
 
 
 .topo{
@@ -266,10 +276,7 @@ tr:nth-child(odd) td{
     background-color: #1b448f;
 }
 
-#veja-tudo{
-    font-size: 20px;
-    margin: 30px 0px 10px 100px;
-}
+
 
 footer{
     height: 15em;
@@ -446,7 +453,7 @@ footer{
 }
 
 .checkout button {
-    background-color: #ff5722;
+    background-color: transparent;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -457,6 +464,6 @@ footer{
 }
 
 .checkout button:hover {
-    background-color: #e64a19;
+    background-color: transparent;
 }
   
