@@ -3,27 +3,20 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #df3f2e;
 }
 
 
 .topo{
-    background-color: #df3f2e;
-    text-align: center;
-    padding: 12px 0px 42px 0px;
-    box-shadow: 20px 20px 20px 20px black;
+    /*text-align: center;*/
+    padding: 20px 0px 42px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo preto com 50% de opacidade */
     height: 45px;
+
 }
 
 .logo-md{
     height: 40px;
-}
-
-.hero{
-    height: 690px;
-    width: 100%;
-    background-image:url(imgs/machu-picchu-61-c.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 nav{
@@ -37,19 +30,16 @@ nav{
     background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0));
 }
 
-.peru{
-    font-size: 20px;
-}
+
 
 .title{
-    color: white;
+    color: rgb(227, 222, 222);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
-    font-size: 100px;
+    font-size: 5em;
     text-align: center;
     margin: auto;
     margin-top: 6%;
-    text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.444);
 }
 
 .logo img{
@@ -123,20 +113,6 @@ nav ul li a{
     font-weight: bold;
 }
 
-.molher{
-    border: 1px solid rgba(0, 0, 0, 0);
-    padding: 10px;
-    margin: 5px;
-    
-}
-
-.molher img{
-    width: 200px;
-    margin: 0px;
-    padding: 0px;
-    vertical-align: top;
-    border-radius: 20px;
-}
 
 .nome-cami{
     color: rgb(97, 97, 97);
