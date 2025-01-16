@@ -15,6 +15,9 @@
     position: fixed;
     width: 100%;
     top: 0;
+    font-weight: bold;
+    color: #df3f2e;
+    font-size: 1.15em;
 }
 
 .logo-md{
