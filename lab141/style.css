@@ -3,7 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e64848;
+    background-color: #e04646;
 }
 
 .carrinho {
@@ -13,7 +13,7 @@
     width: 60px; /* Largura do botão */
     height: 60px; /* Altura do botão, igual à largura para ser redondo */
     background-color: #df3f2e; /* Cor de fundo do botão */
-    color: white; /* Cor do ícone ou texto */
+    color: rgb(255, 255, 255); /* Cor do ícone ou texto */
     border: none; /* Remove bordas */
     border-radius: 50%; /* Torna o botão redondo */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destacar */
@@ -341,13 +341,6 @@ footer{
     font-weight: lighter;
 }
 
-.guia-d img{
-    width: 380px;
-    display: flex;
-    margin: auto;
-    margin-bottom: 40px;
-}
-
 .melhores-d{
     background-color: rgba(255, 0, 0, 0);
     width: 400px;
@@ -359,12 +352,6 @@ footer{
     font-weight: lighter;
 }
 
-.melhores-d img{
-    width: 280px;
-    display: flex;
-    margin: auto;
-    margin-bottom: 40px;
-}
 
 .acessos ul {
     display: flex;
@@ -383,37 +370,6 @@ footer{
     color: white;
 }
 
-.redes-sociais{
-    background-color: rgba(255, 0, 0, 0);
-    display: flex;
-    justify-content: center;
-}
-
-.redes-sociais ul{
-    list-style-type: none;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.redes-sociais ul li{
-    margin: 10px;
-}
-
-.redes-sociais ul li a img{
-
-    background-color: #ffffff;
-    width: 60px;    
-    border-radius: 50%;
-    padding: 10px;
-
-}
-
-.copyright{
-    text-align: center;
-    margin: 20px 20px 0px 20px;
-    color: white;
-}
 
 .hover-container {
     position: relative; /* Necessário para posicionar elementos filhos */
@@ -447,4 +403,74 @@ footer{
     display: block; /* Mostra a imagem */
     
   }
+
+  /*carrinho*/
+  
+  .cart-items {
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.cart-item-details h3 {
+    margin: 0 0 5px;
+    font-size: 1em;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.cart-item-price {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.checkout {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout button:hover {
+    background-color: #e64a19;
+}
   
