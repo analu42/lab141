@@ -7,17 +7,16 @@
 }
 
 
+
 .topo{
-    /*text-align: center;*/
-    padding: 20px 0px 42px 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo preto com 50% de opacidade */
+    padding: 10px 0px 42px 50px;
+    background-color: rgba(255, 255, 255, 0.8); 
     height: 45px;
     position: fixed;
     width: 100%;
     top: 0;
     font-weight: bold;
     color: #df3f2e;
-    font-size: 1.15em;
 }
 
 .logo-md{
@@ -390,3 +389,36 @@ footer{
     color: white;
 }
 
+.hover-container {
+    position: relative; /* Necessário para posicionar elementos filhos */
+    display: inline-block; /* Ajusta-se ao tamanho do conteúdo */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hover-text {
+    font-size: 1.5em;
+    color: rgb(230, 17, 17);
+    background-color: none;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hover-image {
+    display: none; /* A imagem está inicialmente oculta */
+    position: absolute; /* Sobrepõe o texto no mesmo local */
+    top: 0;
+    left: -30%;
+    width: 200%; /* Ajusta-se ao tamanho do contêiner */
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Quando o mouse passa sobre o contêiner */
+  .hover-container:hover .hover-text {
+    opacity: 0; /* Torna o texto invisível */
+  }
+  
+  .hover-container:hover .hover-image {
+    display: block; /* Mostra a imagem */
+    
+  }
+  
