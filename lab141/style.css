@@ -6,6 +6,35 @@
     background-color: #df3f2e;
 }
 
+.carrinho {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância da parte inferior da janela */
+    right: 20px; /* Distância da lateral direita */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão, igual à largura para ser redondo */
+    background-color: #df3f2e; /* Cor de fundo do botão */
+    color: white; /* Cor do ícone ou texto */
+    border: none; /* Remove bordas */
+    border-radius: 50%; /* Torna o botão redondo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destacar */
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    transition: transform 0.2s ease; /* Adiciona efeito ao interagir */
+    font-size:1.5em;
+}
+
+/* Efeito ao passar o mouse */
+.cart-button:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+}
+
+/* Efeito ao clicar */
+.cart-button:active {
+    transform: scale(0.9); /* Reduz ligeiramente o botão */
+}
 
 
 .topo{
