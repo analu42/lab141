@@ -19,9 +19,6 @@
     color: #df3f2e;
 }
 
-.logo-md{
-    height: 40px;
-}
 
 nav{
     display: flex;
@@ -143,7 +140,7 @@ nav ul li a{
 .main-text{
     width: 900px;
     font-size: 25px;
-    color: rgb(68, 68, 68);
+    color: rgb(234, 227, 227);
     font-weight: lighter;
 }
 
