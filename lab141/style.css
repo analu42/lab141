@@ -21,7 +21,7 @@ a:hover {
     right: 20px; /* Distância da lateral direita */
     width: 60px; /* Largura do botão */
     height: 60px; /* Altura do botão, igual à largura para ser redondo */
-    background-color: #df3f2e; /* Cor de fundo do botão */
+    background-color: #dc2f2f; /* Cor de fundo do botão */
     color: rgb(255, 255, 255); /* Cor do ícone ou texto */
     border: none; /* Remove bordas */
     border-radius: 50%; /* Torna o botão redondo */
