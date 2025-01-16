@@ -10,9 +10,11 @@
 .topo{
     /*text-align: center;*/
     padding: 20px 0px 42px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo preto com 50% de opacidade */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo preto com 50% de opacidade */
     height: 45px;
-
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .logo-md{
