@@ -3,7 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #dc2f2f;
+    background-color: rgb(214, 63, 63);
 }
 
 i {
@@ -65,7 +65,7 @@ a:hover {
 }
 
 .hero{
-    padding-top: 45em;
+    padding-top: 50em;
 }
 
 .icon{
@@ -91,7 +91,8 @@ a:hover {
     font-size: 5em;
     text-align: center;
     margin: auto;
-    margin-top: 12%;
+    margin-top: 1em;
+    padding-bottom: 0;
 }
 
 .logo img{
@@ -111,9 +112,11 @@ a:hover {
 
 .main-text{
     width: 900px;
-    font-size: 25px;
+    font-size: 24px;
     color: rgb(234, 227, 227);
     font-weight: lighter;
+    padding-top: 0;
+    text-align: center;
 }
 
 
@@ -364,4 +367,24 @@ input:focus {
 
 .signup-text a:hover {
     text-decoration: underline;
+}
+
+.order-button {
+    background-color: #ebdcdc;
+    color: rgb(215, 45, 45);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 25%;
+    font-weight: bold;
+}
+
+.center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
 }
