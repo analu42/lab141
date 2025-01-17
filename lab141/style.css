@@ -64,6 +64,10 @@ a:hover {
     color: #d13232;
 }
 
+.hero{
+    padding-top: 45em;
+}
+
 .icon{
     position: absolute;
     right: 20px;
