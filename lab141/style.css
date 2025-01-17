@@ -6,6 +6,13 @@
     background-color: #dc2f2f;
 }
 
+i {
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Garante que o ícone se ajuste ao conteúdo */
+    background-color: transparent; /* Remove qualquer fundo residual */
+}
+
 a {
     color: #f5f2f2; /* Altere 'black' para a cor desejada */
     text-decoration: none; /* Remove o sublinhado */
@@ -55,21 +62,23 @@ a:hover {
     width: 100%;
     top: 0;
     font-weight: bold;
-    color: #df3f2e;
+    color: #d13232;
 }
 
-
-nav{
+.icon{
+    position: absolute;
+    right: 20px;
+    top:0.35em;
+    z-index: 1000;
+    font-size:2em;
+    color: #d13232;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: none;
+    border-radius:100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 20px;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 100px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0));
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
-
 
 
 .title{
@@ -106,34 +115,11 @@ nav ul li a{
     margin: 0px 80px;
 }
 
-.bottons li{
-    list-style-type: none;
-    background-color: rgb(255, 255, 255);
-    width: 2000px;
-    height: 90px;
-    text-align: center;
-    font-size: 12px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: 20px 10px 20px 0px;
-    border: 1px solid rgb(158, 158, 158);
-    border-radius: 10px;
-}
 
 .bottons li p img{
     width: 30px;
 }
 
-.bottons li a{
-    text-decoration: none;
-    color: black;
-}
-
-.bottons li:hover{
-    border: 1px solid #0f49b4;
-    box-shadow: 0px 0px 20px 2px #0f49b432;
-}
 
 .caminho{
     color: gray;
@@ -174,11 +160,6 @@ nav ul li a{
     font-weight: bold;
 }
 
-.machu-picchu2{
-    width: 850px;
-    margin: auto;
-    display: block;
-}
 
 .lista{
     width: 900px;
@@ -346,22 +327,7 @@ footer{
 }
 
 
-.acessos ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
 
-}
-
-.acessos ul li{
-    margin: 0px 20px 20px 20px;
-    font-weight: bolder;
-    color: white;
-}
-.acessos ul li a{
-    text-decoration: none;
-    color: white;
-}
 
 
 .hover-container {
