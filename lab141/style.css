@@ -1,9 +1,10 @@
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(214, 63, 63);
+    background-color: rgb(238, 36, 36);
+    
 }
 
 i {
@@ -16,6 +17,7 @@ i {
 a {
     color: #f5f2f2; /* Altere 'black' para a cor desejada */
     text-decoration: none; /* Remove o sublinhado */
+    background-color: transparent;
 }
 
 a:hover {
@@ -32,7 +34,7 @@ a:hover {
     color: rgb(255, 255, 255); /* Cor do ícone ou texto */
     border: none; /* Remove bordas */
     border-radius: 50%; /* Torna o botão redondo */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destacar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.248); /* Adiciona sombra para destacar */
     display: flex; /* Flexbox para centralizar o conteúdo */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
@@ -55,8 +57,8 @@ a:hover {
 
 .topo{
     padding: 10px 0px 42px 50px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    height: 45px;
+    background-color: rgba(250, 249, 243, 0.9); 
+    height: 60px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -64,8 +66,9 @@ a:hover {
     color: #d13232;
 }
 
+
 .hero{
-    padding-top: 50em;
+    padding-top: 8em;
 }
 
 .icon{
@@ -85,14 +88,15 @@ a:hover {
 
 
 .title{
-    color: rgb(227, 222, 222);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(233, 229, 229);
+    font-family: "Bebas Neue", serif;
     font-weight: bolder;
-    font-size: 5em;
-    text-align: center;
-    margin: auto;
-    margin-top: 1em;
+    font-size: 7em;
+    text-align: left;
+    margin: none;
+    padding-top: 0em;
     padding-bottom: 0;
+    line-height: 1;
 }
 
 .logo img{
@@ -103,9 +107,9 @@ a:hover {
 
 .conteudo-principal{
     display: flex;
-    justify-content: center;
-    min-width: 600px;
+    justify-content: left;
     margin-top: 20px;
+    padding-left: 3em;
 }
 
 
@@ -115,57 +119,15 @@ a:hover {
     font-size: 24px;
     color: rgb(234, 227, 227);
     font-weight: lighter;
-    padding-top: 0;
-    text-align: center;
-}
-
-
-.div-table{
-    display: flex;
-    justify-content: center;
-}
-
-table{
-    width: 400px;
-    border-collapse: collapse;
-    margin-bottom: 40px;
-}
-td, th{
-    border: 2px solid rgb(231, 231, 231);
+    padding-top: 0.3em;
     text-align: left;
+    padding-left: 0.1em;
+    padding-bottom: 1em;
 }
-.thotel{
-    background-color: #871919;
-    color: white;
-    padding: 10px 250px;
-    border: none;
-}
-
-.tnota{
-    background-color: #a32020;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-}
-.tlink{
-    background-color: #871919;
-    color: white;
-    padding: 10px 40px;
-    border: none;
-}
-
-td{
-   padding: 10px;
-}
-
-tr:nth-child(odd) td{
-    background-color: rgb(231, 231, 231);
-}
-
-
 
 footer{
     height: 15em;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -177,10 +139,11 @@ footer{
   }
   
   .hover-text {
-    font-size: 1.5em;
+    font-size: 2em;
     color: rgb(230, 17, 17);
-    background-color: none;
+    background-color: transparent;
     background-color: rgba(255, 255, 255, 0.1);
+    font-family: "Bebas Neue", serif;
   }
   
   .hover-image {
@@ -188,7 +151,7 @@ footer{
     position: absolute; /* Sobrepõe o texto no mesmo local */
     top: 0;
     left: -30%;
-    width: 200%; /* Ajusta-se ao tamanho do contêiner */
+    width: 150%; /* Ajusta-se ao tamanho do contêiner */
     background-color: rgba(255, 255, 255, 0.1);
   }
   
@@ -274,11 +237,11 @@ footer{
   
 /*login*/
 body {
-    display: flex;
+
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #dc2f2f;
+    background-color: rgb(238, 36, 36);
 }
 
 .login-container {
@@ -380,11 +343,11 @@ input:focus {
     transition: background-color 0.3s ease;
     width: 25%;
     font-weight: bold;
+    margin-bottom: 3em;
 }
 
 .center{
     text-align: center;
     display: flex;
     justify-content: center;
-    padding-bottom: 25px;
 }
