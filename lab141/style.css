@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Montserrat", serif;
+    font-weight: 550;
     background-color: rgb(238, 36, 36);
     
 }
@@ -24,6 +25,12 @@ a:hover {
     color: rgb(215, 213, 213); /* Cor ao passar o mouse */
 }
 
+.white-box{
+    background-color: #ebdcdc;
+    width: 100%;
+    height: 40em;
+    margin-bottom: 5em;
+}
 .carrinho {
     position: fixed; /* Fixa o botão na tela */
     bottom: 20px; /* Distância da parte inferior da janela */
@@ -68,7 +75,7 @@ a:hover {
 
 
 .hero{
-    padding-top: 8em;
+    padding-top: 12em;
 }
 
 .icon{
@@ -99,6 +106,14 @@ a:hover {
     line-height: 1;
 }
 
+#p5-container {
+    display: block; /* Garante que o contêiner ocupe a largura total, se necessário */
+    margin-top: 2em; /* Espaçamento vertical */
+    margin-left: 0; /* Alinhe à esquerda ou ajuste conforme o design */
+    text-align: center; /* Centraliza o canvas no contêiner */
+    width: auto; /* Ajuste a largura conforme necessário */ 
+}
+
 .logo img{
     color: white;
     width: 12em;
@@ -106,10 +121,11 @@ a:hover {
 
 
 .conteudo-principal{
+    padding-left: 5em;
     display: flex;
-    justify-content: left;
-    margin-top: 20px;
-    padding-left: 3em;
+    flex-wrap: wrap; /* Permite que os elementos ocupem várias linhas, se necessário */
+    justify-content: flex-start; /* Alinha os elementos à esquerda */
+    gap: 2em; /* Espaçamento entre os elementos */
 }
 
 
@@ -129,6 +145,8 @@ footer{
     height: 15em;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 10; 
 }
 
 .hover-container {
@@ -144,6 +162,7 @@ footer{
     background-color: transparent;
     background-color: rgba(255, 255, 255, 0.1);
     font-family: "Bebas Neue", serif;
+    font-weight: bolder;
   }
   
   .hover-image {
