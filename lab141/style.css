@@ -112,7 +112,7 @@ ul li:hover .submenu {
 .white-box{
     background-color: #ebdcdc;
     width: 100%;
-    height: 40em;
+    height: 42vw;
     margin-bottom: 5em;
 }
 .carrinho {
@@ -344,7 +344,6 @@ footer{
   
 /*login*/
 body {
-
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -352,6 +351,7 @@ body {
 }
 
 .login-container {
+    font-family: "Bebas Neue", serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -373,7 +373,27 @@ h2 {
     color: #d13232;
     margin-bottom: 20px;
     font-size: 2em;
-    background-color: #f3f1f1;
+    font-family: "Bebas Neue", serif;
+}
+
+h3 {
+    color: #4b4444;
+    margin-bottom: 20px;
+    font-size: 4.5em;
+    font-weight: bold;
+    font-family: "Bebas Neue", serif;
+    margin-left: 4vw;
+    padding-top: 3vw;
+}
+
+h4{
+    color: #4b4444;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: "Montserrat", serif;
+    margin-left: 4vw;
+    padding-top: 3vw;
+}
 }
 
 .form-group {
@@ -458,4 +478,8 @@ input:focus {
     text-align: center;
     display: flex;
     justify-content: center;
+}
+
+.red{
+    color: #dc2f2f;
 }
