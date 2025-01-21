@@ -31,6 +31,7 @@ ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-top: 2.4vw;
 }
 
 ul li {
@@ -44,6 +45,7 @@ ul li a {
     color: #d41e1e;
     font-size: 1em;
     transition: background-color 0.3s ease;
+    line-height: normal;
 }
 
 /* Cor de fundo ao passar o mouse */
@@ -154,6 +156,8 @@ nav.topo{
     font-weight: bold;
     color: #d13232;
     display: flex;
+    justify-content: space-between; /* Distribui os elementos nas extremidades */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 
@@ -238,6 +242,7 @@ footer{
     display: inline-block; /* Ajusta-se ao tamanho do conteúdo */
     height: 100%;
     background-color: transparent;
+    align-items: center;
   }
   
   .hover-text {
