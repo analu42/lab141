@@ -112,7 +112,7 @@ ul li:hover .submenu {
 .white-box{
     background-color: #ebdcdc;
     width: 100%;
-    height: 42vw;
+    height: 100%;
     margin-bottom: 5em;
 }
 .carrinho {
@@ -194,6 +194,18 @@ nav.topo{
     width: 56.2vw;
 }
 
+.title2{
+    color: rgb(233, 229, 229);
+    font-family: "Bebas Neue", serif;
+    font-weight: bolder;
+    font-size: 7vw;    ;
+    margin: none;
+    padding-top: 0em;
+    padding-bottom: 0;
+    line-height: 1;
+    width: 56.2vw;
+}
+
 #p5-container {
     display: block; /* Garante que o contêiner ocupe a largura total, se necessário */
     margin-top: 2em; /* Espaçamento vertical */
@@ -230,9 +242,9 @@ nav.topo{
 }
 
 footer{
-    height: 15em;
+    height: end;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(235, 223, 223);
     position: relative;
     z-index: 10; 
 }
@@ -382,19 +394,21 @@ h3 {
     font-size: 4.5em;
     font-weight: bold;
     font-family: "Bebas Neue", serif;
-    margin-left: 4vw;
-    padding-top: 3vw;
+    padding-top: 4vw;
+    text-align: center;
 }
 
 h4{
     color: #4b4444;
     margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: "Montserrat", serif;
-    margin-left: 4vw;
-    padding-top: 3vw;
+    font-weight: 450;
+    text-align: center;
+    margin: 0vw 6vw 6vw 6vw;
+    padding-bottom: 6vw;
 }
-}
+
 
 .form-group {
     margin-bottom: 15px;
@@ -482,4 +496,35 @@ input:focus {
 
 .red{
     color: #dc2f2f;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 7vw;
+}
+
+.profile-card {
+    background: #efeded;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1vw;
+    text-align: center;
+    width: 200px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    border: 3px solid #333;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
