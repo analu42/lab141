@@ -4,8 +4,6 @@
     box-sizing: border-box;
     font-family: "Montserrat", serif;
     font-weight: 550;
-    background-color: rgb(238, 36, 36);
-    
 }
 
 i {
@@ -23,6 +21,90 @@ a {
 
 a:hover {
     color: rgb(215, 213, 213); /* Cor ao passar o mouse */
+}
+
+/* Menu principal */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul li {
+    position: relative; /* Necessário para o posicionamento do submenu */
+}
+
+ul li a {
+    display: block;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+/* Cor de fundo ao passar o mouse */
+ul li a:hover {
+    background-color: transparent;
+}
+
+/* Submenu */
+.submenu {
+    display: none; /* Oculta o submenu por padrão */
+    position: absolute;
+    top: 100%; /* Posiciona abaixo do item principal */
+    left: 0;
+    background-color: #f3f1f1;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.submenu li {
+    width: 200px; /* Define uma largura fixa para os itens do submenu */
+}
+
+.submenu li a {
+    color: #333;
+    padding: 0.8em 1em;
+    font-size: 0.9em;
+}
+
+.submenu li a:hover {
+    background-color: #ebdcdc;
+
+}
+
+/* Mostrar o submenu ao passar o mouse */
+ul li:hover .submenu {
+    display: block;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    ul {
+        flex-direction: column; /* Alinha o menu verticalmente */
+    }
+
+    ul li {
+        width: 100%; /* Faz com que cada item ocupe a largura total */
+    }
+
+    ul li a {
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .submenu {
+        position: static; /* Remove a posição absoluta */
+        box-shadow: none; /* Remove a sombra */
+    }
+
+    .submenu li a {
+        text-align: center; /* Centraliza os itens do submenu */
+    }
 }
 
 .white-box{
@@ -62,7 +144,7 @@ a:hover {
 }
 
 
-.topo{
+nav.topo{
     padding: 10px 0px 42px 50px;
     background-color: rgba(250, 249, 243, 0.9); 
     height: 60px;
@@ -71,6 +153,7 @@ a:hover {
     top: 0;
     font-weight: bold;
     color: #d13232;
+
 }
 
 
