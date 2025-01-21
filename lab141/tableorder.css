@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(238, 36, 36);
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(238, 36, 36);
+  color: white;
+  text-align: center;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse; 
+    margin: 0 auto;   
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th{
+    background-color: darkred;
+    color: white; 
+    padding: 10px; 
+    text-align: left; 
+  }
+  
+  thead {
+    background-color: salmon;
+  }
