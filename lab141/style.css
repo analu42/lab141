@@ -39,9 +39,9 @@ ul li {
 
 ul li a {
     display: block;
-    padding: 1em 1.5em;
+    padding: 0em 1.5em;
     text-decoration: none;
-    color: #ffffff;
+    color: #d41e1e;
     font-size: 1em;
     transition: background-color 0.3s ease;
 }
@@ -181,12 +181,13 @@ nav.topo{
     color: rgb(233, 229, 229);
     font-family: "Bebas Neue", serif;
     font-weight: bolder;
-    font-size: 7em;
+    font-size: 7vw;    ;
     text-align: left;
     margin: none;
     padding-top: 0em;
     padding-bottom: 0;
     line-height: 1;
+    width: 56.2vw;
 }
 
 #p5-container {
@@ -195,7 +196,7 @@ nav.topo{
     margin-left: 0; /* Alinhe à esquerda ou ajuste conforme o design */
     text-align: center; /* Centraliza o canvas no contêiner */
     width: auto; /* Ajuste a largura conforme necessário */ 
-}
+   }
 
 .logo img{
     color: white;
@@ -214,11 +215,11 @@ nav.topo{
 
 
 .main-text{
-    width: 900px;
-    font-size: 24px;
+    width: 50vw;
+    font-size: 1.5vw;
     color: rgb(234, 227, 227);
     font-weight: lighter;
-    padding-top: 0.3em;
+    padding-top: 1.5vw;
     text-align: left;
     padding-left: 0.1em;
     padding-bottom: 1em;
@@ -236,13 +237,12 @@ footer{
     position: relative; /* Necessário para posicionar elementos filhos */
     display: inline-block; /* Ajusta-se ao tamanho do conteúdo */
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent;
   }
   
   .hover-text {
     font-size: 2em;
     color: rgb(230, 17, 17);
-    background-color: transparent;
     background-color: rgba(255, 255, 255, 0.1);
     font-family: "Bebas Neue", serif;
     font-weight: bolder;
@@ -439,13 +439,14 @@ input:focus {
     color: rgb(215, 45, 45);
     border: none;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1.3vw;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 25%;
+    width: 18vw;
     font-weight: bold;
     margin-bottom: 3em;
+    margin-top:1vw;
 }
 
 .center{
