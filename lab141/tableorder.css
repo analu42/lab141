@@ -20,6 +20,12 @@ table {
     border-collapse: collapse; 
     margin: 0 auto; 
     margin-bottom: 7px;  
+    transition: transform 0.3s ease;
+    z-index: 1;
+  } 
+
+  table:hover {
+    transform: scale(1.02);
   }
   
   th, td {
@@ -28,6 +34,35 @@ table {
     text-align: left;
     background-color: white;
     color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9; 
+  }
+
+  tr:hover {
+    background-color: #ffe3e3; 
+  }
+  td:hover {
+    color: #ff5555;
+    font-weight: bold;
+  }
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  tr {
+    animation: fadeIn 0.5s ease forwards;
   }
 
   th{
@@ -36,6 +71,63 @@ table {
     padding: 10px; 
     text-align: left; 
   }
+  
+  @media (max-width: 768px) {
+    /* Reduz o espaçamento e ajusta o menu */
+    ul {
+        flex-direction: row; /* Garante que o menu permaneça horizontal */
+        justify-content: space-evenly; /* Distribui os itens igualmente */
+        padding-top: 10px; /* Ajusta o padding para ocupar menos espaço */
+    }
+
+    ul li {
+        width: auto; /* Mantém o tamanho dos itens do menu ajustado ao conteúdo */
+    }
+
+    ul li a {
+        font-size: 0.9em; /* Reduz o tamanho da fonte */
+        padding: 0.5em 0.8em; /* Reduz o preenchimento */
+    }
+
+    .submenu {
+        position: absolute; /* Mantém o submenu posicionado corretamente */
+        top: 100%; /* Posiciona logo abaixo do item principal */
+    }
+
+    .submenu li {
+        width: 100%; /* Permite que os itens do submenu ocupem toda a largura */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilo ainda menor, mas mantém horizontal */
+    nav.topo {
+        padding: 5px;
+    }
+
+    ul {
+        justify-content: space-around; /* Ajusta o espaçamento para caber */
+        padding: 5px;
+    }
+
+    ul li a {
+        font-size: 0.8em; /* Tamanho de fonte menor */
+    }
+
+    .submenu {
+        width: 150px; /* Define uma largura mínima para o submenu */
+    }
+
+    header h1 {
+        font-size: 1em; /* Reduz tamanho do título principal */
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
+
+
 
   h3{
     margin-bottom: 3px;
@@ -66,6 +158,7 @@ table {
     display: flex;
     justify-content: space-between; /* Distribui os elementos nas extremidades */
     align-items: center; /* Centraliza verticalmente */
+    z-index: 10;
   }
   
   .hover-container {
