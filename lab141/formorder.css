@@ -11,7 +11,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: rgb(238, 36, 36);
-  color: #333;
+  color: white;
   text-align: center;
 }
 
@@ -23,6 +23,18 @@ form{
   border-radius: 10px;
   text-align: left; 
   color: white;
+  margin-bottom: 50px;
+  opacity: 0;
+    transform: translateY(-50px); 
+    animation: slideIn 0.8s ease forwards;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 label{
@@ -41,11 +53,13 @@ label{
   border-radius: 5px;
   background-color: #fdf6f5;
   color: #000;
+  transition: border 0.3s ease, background-color 0.3s ease;
 }
 
 input:focus, textarea:focus{
   border-color: #ff7459;
   background-color: #ffe0dc;
+  border: 2px solid;
 }
 
 button{
@@ -57,11 +71,14 @@ button{
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.3 ease;
 }
 
 
 button:hover{
   background-color: #ff7459;
+  transform: scale(1.1);
 }
 
 .radio-group {
@@ -80,4 +97,142 @@ input[type="radio"]{
   margin: 8px;
   vertical-align: middle;
   margin-inline-start: 8px;
+}
+
+nav.topo{
+  padding: 10px 0px 42px 50px;
+  background-color: rgba(250, 249, 243, 0.9); 
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: #d13232;
+  display: flex;
+  justify-content: space-between; /* Distribui os elementos nas extremidades */
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 10;
+}
+
+.hover-container {
+  position: relative; /* Necessário para posicionar elementos filhos */
+  display: inline-block; /* Ajusta-se ao tamanho do conteúdo */
+  height: 100%;
+  background-color: transparent;
+  align-items: center;
+}
+
+.hover-text {
+  font-size: 2em;
+  color: rgb(230, 17, 17);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: "Bebas Neue", serif;
+  font-weight: bolder;
+}
+
+.hover-image {
+  display: none; /* A imagem está inicialmente oculta */
+  position: absolute; /* Sobrepõe o texto no mesmo local */
+  top: 0;
+  left: -30%;
+  width: 150%; /* Ajusta-se ao tamanho do contêiner */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hover-container:hover .hover-text {
+  opacity: 0; /* Torna o texto invisível */
+}
+
+.hover-container:hover .hover-image {
+  display: block; /* Mostra a imagem */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(250, 249, 243, 0.9);
+  align-items: center;
+  padding-top: 2.4vw;
+}
+
+ul li {
+  position: relative; /* Necessário para o posicionamento do submenu */
+}
+
+ul li a {
+  display: block;
+  padding: 0em 1.5em;
+  text-decoration: none;
+  color: #d41e1e;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  background-color: rgba(250, 249, 243, 0.9);
+  line-height: normal;
+}
+
+/* Cor de fundo ao passar o mouse */
+ul li a:hover {
+  background-color: transparent ;
+}
+
+/* Submenu */
+.submenu {
+  display: none; /* Oculta o submenu por padrão */
+  position: absolute;
+  top: 100%; /* Posiciona abaixo do item principal */
+  left: 0;
+  background-color: #f3f1f1;
+  padding: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.submenu li {
+  width: 200px; /* Define uma largura fixa para os itens do submenu */
+}
+
+.submenu li a {
+  color: #333;
+  padding: 0.8em 1em;
+  font-size: 0.9em;
+}
+
+.submenu li a:hover {
+  background-color: #ebdcdc;
+
+}
+
+/* Mostrar o submenu ao passar o mouse */
+ul li:hover .submenu {
+  display: block;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  ul {
+      flex-direction: column; /* Alinha o menu verticalmente */
+  }
+
+  ul li {
+      width: 100%; /* Faz com que cada item ocupe a largura total */
+  }
+
+  ul li a {
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .submenu {
+      position: static; /* Remove a posição absoluta */
+      box-shadow: none; /* Remove a sombra */
+  }
+
+  .submenu li a {
+      text-align: center; /* Centraliza os itens do submenu */
+  }
+
+  
+
+
 }

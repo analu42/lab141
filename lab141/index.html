@@ -30,7 +30,7 @@
     <div class="content ">
 
         <!--menu superior-->
-        <nav class="topo" style="">
+        <nav class="topo">
 
             <!--logo-->
             <div class="hover-container">
@@ -38,13 +38,15 @@
                 <img src="imgs/lab1413d.png" alt="lab141 3d" class="hover-image">
             </div>
             
-            <div>
-                <ul>
+            <div class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+
+            <div id="submenu-container">
+                <ul id="submenu" class="menu">
                     <li><a href="#home">Home</a></li>
                     <li>
                         <a href="#services">Serviços</a>
-                        <ul class="submenu">
-                            <li><a href="#design">Modelagem</a></li>
+                        <ul id="subsubmenu" class="submenu" >
+                            <li><a href="tableorder.html">Modelagem</a></li>
                             <li><a href="#impressao">Impressão 3D</a></li>
                             <li><a href="Catálogo141/main.html">Catálogo</a></li>
                             <li><a href="#consultoria">Fale Conosco</a></li>
@@ -71,7 +73,7 @@
                     </p> 
 
                     <div>
-                        <a href="order.html">
+                        <a href="tableorder.html">
                             <button class="order-button">
                                 Faça seu pedido!
                             </button>    
@@ -136,7 +138,7 @@
         </div>
 
         
-        <footer>
+        <footer id="consultoria">
             <div class="footer-container">
                 <div class="footer-section contact">
                     <h3>Contato</h3>

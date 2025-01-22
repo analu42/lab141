@@ -163,6 +163,7 @@ nav.topo{
 }
 
 
+
 .hero{
     padding-top: 12em;
 }
@@ -196,6 +197,25 @@ nav.topo{
     width: 56.2vw;
 }
 
+/* Ajustes para telas menores (ex.: celulares) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 12vw; /* Aumenta o tamanho relativo em telas menores */
+        text-align: left; /* Centraliza o texto */
+        width: 90%; /* Ajusta a largura para caber melhor */
+        margin: 0; 
+    }
+}
+
+/* Ajustes para telas muito pequenas (ex.: celulares antigos) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 12vw; /* Fonte ainda maior para leitura */
+        text-align: left; /* Mantém o texto centralizado */
+        width: 100%; /* O texto ocupa toda a largura */
+    }
+}
+
 .title2{
     color: rgb(233, 229, 229);
     font-family: "Bebas Neue", serif;
@@ -215,6 +235,7 @@ nav.topo{
     text-align: center; /* Centraliza o canvas no contêiner */
     width: auto; /* Ajuste a largura conforme necessário */ 
    }
+
 
 .logo img{
     color: white;
@@ -241,6 +262,26 @@ nav.topo{
     text-align: left;
     padding-left: 0.1em;
     padding-bottom: 1em;
+}
+
+/* Ajustes para tablets e dispositivos menores */
+@media (max-width: 768px) {
+    .main-text {
+        width: 80%; /* Aumenta a largura para ocupar mais espaço */
+        font-size: 4vw; /* Fonte maior para leitura em telas menores */
+        text-align: left; /* Centraliza o texto */
+        margin: 0; /* Centraliza o bloco */
+    }
+}
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+    .main-text {
+        width: 90%; /* Quase toda a largura da tela */
+        font-size: 5vw; /* Fonte maior ainda para legibilidade */
+        padding-top: 1em; /* Ajusta o espaçamento superior */
+        text-align: left; /* Centraliza o texto */
+    }
 }
 
 footer{
@@ -285,6 +326,7 @@ footer{
     display: block; /* Mostra a imagem */
     
   }
+
 
   /*carrinho*/
   
@@ -491,6 +533,25 @@ input:focus {
     margin-top:1vw;
 }
 
+/* Ajustes para tablets e dispositivos menores */
+@media (max-width: 768px) {
+    .order-button {
+        font-size: 3vw; /* Fonte maior para telas menores */
+        width: 60%; /* Reduz a largura proporcional */
+        padding: 12px 18px; /* Ajusta o espaçamento interno */
+    }
+}
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+    .order-button {
+        font-size: 4vw; /* Ainda maior para melhor leitura */
+        width: 60%; /* O botão ocupa quase toda a largura da tela */
+        padding: 12px 18px; /* Ajusta o espaçamento interno */
+
+    }
+}
+
 .center{
     text-align: center;
     display: flex;
@@ -549,4 +610,92 @@ input:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+/*responsividade menu lateral*/
+.menu {
+    display: flex;
+    list-style: none;
+    background-color: transparent;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    nav.topo {
+        display: flex;
+        align-items: center; /* Centraliza verticalmente os itens */
+        justify-content: space-between; /* Espaço entre logo e menu */
+        position: fixed;
+        height: 60px; /* Altura fixa para a navbar */
+        background-color: #fce8e3; /* Cor de fundo da navbar */
+        padding: 0 15px; /* Espaçamento horizontal */
+    }
+
+    .menu-icon {
+        display: flex;
+        padding-left: 75%;
+        padding-right: 5%;
+        cursor: pointer; /* Adiciona um cursor de pointer ao ícone */
+    }
+
+    /* Submenu escondido por padrão */
+    #submenu-container {
+        display: none;
+    }
+
+    /* Quando o submenu é ativado */
+    #submenu-container.show {
+        display: block; /* Exibe o submenu */
+        background-color: #fce8e3; /* Cor de fundo do submenu */
+        position:absolute;
+        top: 60px; /* Alinhado com a altura da navbar */
+        right: 0;
+        width: 50%;
+        z-index: 1000; /* Garante que ficará acima de outros elementos */
+    }
+
+    #submenu-container .menu {
+        list-style: none;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center; /* Centraliza os itens */
+    }
+
+    #submenu-container .menu li {
+        padding: 1vw 0;
+    }
+
+    #submenu-container .menu li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        display: block;
+    }
+
+    #submenu-container .menu li a:hover {
+        background-color: #f3d9d9;
+    }
+
+    
 }

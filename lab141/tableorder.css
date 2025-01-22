@@ -1,39 +1,283 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(238, 36, 36);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(238, 36, 36);
 }
 
 
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: rgb(238, 36, 36);
-  color: white;
-  text-align: center;
+font-family: Arial, sans-serif;
+background-color: rgb(238, 36, 36);
+color: white;
+text-align: center;
 }
 
 table {
-    width: 60%;
-    border-collapse: collapse; 
-    margin: 0 auto;   
+  width: 60%;
+  border-collapse: collapse; 
+  margin: 0 auto; 
+  margin-bottom: 7px;  
+  transition: transform 0.3s ease;
+  z-index: 1;
+} 
+
+table:hover {
+  transform: scale(1.02);
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+
+tr:hover {
+  background-color: #ffe3e3; 
+}
+td:hover {
+  color: #ff5555;
+  font-weight: bold;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: left;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+tr {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+th{
+  background-color: darkred;
+  color: white; 
+  padding: 10px; 
+  text-align: left; 
+}
+
+@media (max-width: 768px) {
+  /* Reduz o espaçamento e ajusta o menu */
+  ul {
+      flex-direction: row; /* Garante que o menu permaneça horizontal */
+      justify-content: space-evenly; /* Distribui os itens igualmente */
+      padding-top: 10px; /* Ajusta o padding para ocupar menos espaço */
   }
 
-  th{
-    background-color: darkred;
-    color: white; 
-    padding: 10px; 
-    text-align: left; 
+  ul li {
+      width: auto; /* Mantém o tamanho dos itens do menu ajustado ao conteúdo */
   }
-  
-  thead {
-    background-color: salmon;
+
+  ul li a {
+      font-size: 0.9em; /* Reduz o tamanho da fonte */
+      padding: 0.5em 0.8em; /* Reduz o preenchimento */
   }
+
+  .submenu {
+      position: absolute; /* Mantém o submenu posicionado corretamente */
+      top: 100%; /* Posiciona logo abaixo do item principal */
+  }
+
+  .submenu li {
+      width: 100%; /* Permite que os itens do submenu ocupem toda a largura */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Estilo ainda menor, mas mantém horizontal */
+  nav.topo {
+      padding: 5px;
+  }
+
+  ul {
+      justify-content: space-around; /* Ajusta o espaçamento para caber */
+      padding: 5px;
+  }
+
+  ul li a {
+      font-size: 0.8em; /* Tamanho de fonte menor */
+  }
+
+  .submenu {
+      width: 150px; /* Define uma largura mínima para o submenu */
+  }
+
+  header h1 {
+      font-size: 1em; /* Reduz tamanho do título principal */
+  }
+
+  footer p {
+      font-size: 0.8em;
+  }
+}
+
+
+
+h3{
+  margin-bottom: 3px;
+}
+
+.aviso{
+  margin-bottom: 50px;
+}
+
+a{
+  color: white;
+}
+
+.qntd{
+  width: 5%;
+}
+
+
+
+nav.topo{
+  padding: 10px 0px 42px 50px;
+  background-color: rgba(250, 249, 243, 0.9); 
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: #d13232;
+  display: flex;
+  justify-content: space-between; /* Distribui os elementos nas extremidades */
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 10;
+}
+
+.hover-container {
+  position: relative; /* Necessário para posicionar elementos filhos */
+  display: inline-block; /* Ajusta-se ao tamanho do conteúdo */
+  height: 100%;
+  background-color: transparent;
+  align-items: center;
+}
+
+.hover-text {
+  font-size: 2em;
+  color: rgb(230, 17, 17);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: "Bebas Neue", serif;
+  font-weight: bolder;
+}
+
+.hover-image {
+  display: none; /* A imagem está inicialmente oculta */
+  position: absolute; /* Sobrepõe o texto no mesmo local */
+  top: 0;
+  left: -30%;
+  width: 150%; /* Ajusta-se ao tamanho do contêiner */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hover-container:hover .hover-text {
+  opacity: 0; /* Torna o texto invisível */
+}
+
+.hover-container:hover .hover-image {
+  display: block; /* Mostra a imagem */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(250, 249, 243, 0.9);
+  align-items: center;
+  padding-top: 2.4vw;
+}
+
+ul li {
+  position: relative; /* Necessário para o posicionamento do submenu */
+}
+
+ul li a {
+  display: block;
+  padding: 0em 1.5em;
+  text-decoration: none;
+  color: #d41e1e;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  background-color: rgba(250, 249, 243, 0.9);
+  line-height: normal;
+}
+
+/* Cor de fundo ao passar o mouse */
+ul li a:hover {
+  background-color: transparent ;
+}
+
+/* Submenu */
+.submenu {
+  display: none; /* Oculta o submenu por padrão */
+  position: absolute;
+  top: 100%; /* Posiciona abaixo do item principal */
+  left: 0;
+  background-color: #f3f1f1;
+  padding: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.submenu li {
+  width: 200px; /* Define uma largura fixa para os itens do submenu */
+}
+
+.submenu li a {
+  color: #333;
+  padding: 0.8em 1em;
+  font-size: 0.9em;
+}
+
+.submenu li a:hover {
+  background-color: #ebdcdc;
+
+}
+
+/* Mostrar o submenu ao passar o mouse */
+ul li:hover .submenu {
+  display: block;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  ul {
+      flex-direction: column; /* Alinha o menu verticalmente */
+  }
+
+  ul li {
+      width: 100%; /* Faz com que cada item ocupe a largura total */
+  }
+
+  ul li a {
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .submenu {
+      position: static; /* Remove a posição absoluta */
+      box-shadow: none; /* Remove a sombra */
+  }
+
+  .submenu li a {
+      text-align: center; /* Centraliza os itens do submenu */
+  }
+
+}  
