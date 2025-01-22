@@ -3,16 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="carrinho.css">
-  <title>Carrinho com Opções de Pagamento</title>
-    
+   <link rel="stylesheet" href="main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-  
+  <title>Carrinho com Opções de Pagamento</title>
+ 
 </head>
 <body>
+  <!-- Navbar -->
+       <!--menu superior-->
+       <nav class="topo" style="">
+
+        <!--logo-->
+        <div class="hover-container">
+            <p class="hover-text">lab141</p>
+            <img src="imgs/lab1413d.png" alt="lab141 3d" class="hover-image">
+        </div>
+        
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                    <a href="#services">Serviços</a>
+                    <ul class="submenu">
+                        <li><a href="#design">Modelagem</a></li>
+                        <li><a href="#impressao">Impressão 3D</a></li>
+                        <li><a href="Catálogo141/main.html">Catálogo</a></li>
+                        <li><a href="#consultoria">Fale Conosco</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+                    
+    </nav>
+ 
   <div class="container">
-    <h1><i class="fa-solid fa-cart-shopping">Carrinho de Compras</i></h1>
-    
+    <h1><i class="fa-solid fa-cart-shopping"></i>carrinho de compras</h1>
+    <head>
+        
     <!-- Seção de Produtos -->
     <div class="section">
       <h2>Produtos</h2>
@@ -47,15 +77,15 @@
         <input type="radio" id="dinheiro" name="payment" value="dinheiro" onclick="selectPaymentMethod('dinheiro')">
         <label for="dinheiro">Dinheiro</label>
       </div>
-      <div>
+    
         <input type="radio" id="cartao" name="payment" value="cartao" onclick="selectPaymentMethod('cartao')">
         <label for="cartao">Cartão</label>
-      </div>
+      
       <div>
         <input type="radio" id="pix" name="payment" value="pix" onclick="selectPaymentMethod('pix')">
         <label for="pix">PIX</label>
       </div>
-
+    </div>
       <div id="payment-details" class="hidden">
         <div id="dinheiro-details" class="hidden">
           <p>Pagamento em dinheiro será recebido na entrega.</p>
