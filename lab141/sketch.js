@@ -31,3 +31,10 @@ function windowResized() {
     resizeCanvas(container.offsetWidth, container.offsetWidth * 0.75); // Atualiza o tamanho do canvas
 
   }
+
+const menuIcon = document.getElementById('menu-icon');
+const submenuContainer = document.getElementById('submenu-container');
+
+menuIcon.addEventListener('click', () => {
+    submenuContainer.classList.toggle('show'); // Alterna a visibilidade do submenu
+});

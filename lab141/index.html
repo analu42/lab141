@@ -38,14 +38,14 @@
                 <img src="imgs/lab1413d.png" alt="lab141 3d" class="hover-image">
             </div>
             
-            <div class="menu-icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
 
-            <div>
-                <ul class="menu">
+            <div id="submenu-container">
+                <ul id="submenu" class="menu">
                     <li><a href="#home">Home</a></li>
                     <li>
                         <a href="#services">Serviços</a>
-                        <ul class="submenu">
+                        <ul id="subsubmenu" class="submenu" >
                             <li><a href="#design">Modelagem</a></li>
                             <li><a href="#impressao">Impressão 3D</a></li>
                             <li><a href="Catálogo141/main.html">Catálogo</a></li>
@@ -138,7 +138,7 @@
         </div>
 
         
-        <footer>
+        <footer id="consultoria">
             <div class="footer-container">
                 <div class="footer-section contact">
                     <h3>Contato</h3>
