@@ -25,6 +25,7 @@ a:hover {
 
 /* Menu principal */
 ul {
+    font-family: "Montserrat", serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,6 +36,7 @@ ul {
 }
 
 ul li {
+    font-family: "Montserrat", serif;
     position: relative; /* Necessário para o posicionamento do submenu */
 }
 
