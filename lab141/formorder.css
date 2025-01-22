@@ -24,6 +24,17 @@ form{
   text-align: left; 
   color: white;
   margin-bottom: 50px;
+  opacity: 0;
+    transform: translateY(-50px); 
+    animation: slideIn 0.8s ease forwards;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 label{
@@ -42,11 +53,13 @@ label{
   border-radius: 5px;
   background-color: #fdf6f5;
   color: #000;
+  transition: border 0.3s ease, background-color 0.3s ease;
 }
 
 input:focus, textarea:focus{
   border-color: #ff7459;
   background-color: #ffe0dc;
+  border: 2px solid;
 }
 
 button{
@@ -58,11 +71,14 @@ button{
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.3 ease;
 }
 
 
 button:hover{
   background-color: #ff7459;
+  transform: scale(1.1);
 }
 
 .radio-group {
@@ -94,6 +110,7 @@ nav.topo{
   display: flex;
   justify-content: space-between; /* Distribui os elementos nas extremidades */
   align-items: center; /* Centraliza verticalmente */
+  z-index: 10;
 }
 
 .hover-container {
