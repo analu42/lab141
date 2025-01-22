@@ -7,20 +7,19 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color:  #d13232;
 }
 
 header {
-    background-color: rgb(230, 74, 74);
     color: white;
-    padding: 13px 1px;
+    margin: 0.5vw;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 120px; /* Ajuste o valor conforme a altura desejada */
+    height: 12vw; /* Ajuste o valor conforme a altura desejada */
 }
 
 
@@ -39,7 +38,9 @@ nav.topo{
     align-items: center; /* Centraliza verticalmente */
 }
 
-
+h1{
+    margin-bottom: 1.5vw;
+}
 
 .hover-container {
     position: relative; /* Necessário para posicionar elementos filhos */
@@ -177,7 +178,7 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
+    height: 100%;
     padding: 15px;
 }
 
@@ -198,7 +199,7 @@ ul li a:hover {
 
 .produto h3 {
     font-size: 1.2rem;
-    margin: 10px 0 5px 0;
+    margin: 1vw 0 1vw 0;
 }
 
 .produto p {
@@ -211,7 +212,7 @@ ul li a:hover {
     color: #eb5848;
     font-weight: bold;
     font-size: 1.1rem;
-    margin-bottom: 0px;
+    margin-bottom: 1.5vw;
 }
 
 .produto button {

@@ -25,6 +25,7 @@ a:hover {
 
 /* Menu principal */
 ul {
+    font-family: "Montserrat", serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,6 +36,7 @@ ul {
 }
 
 ul li {
+    font-family: "Montserrat", serif;
     position: relative; /* Necessário para o posicionamento do submenu */
 }
 
@@ -505,6 +507,25 @@ input:focus {
     gap: 20px;
     margin: 7vw;
 }
+/* Ajuste para telas menores (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Alinha os itens em uma única coluna */
+        align-items: center;
+        margin: 5vw; /* Reduz as margens */
+        gap: 15px; /* Reduz o espaço entre os itens */
+    }
+}
+
+/* Ajuste adicional para telas muito pequenas (largura máxima de 480px) */
+@media (max-width: 480px) {
+    .profile-container {
+        margin: 3vw; /* Margens ainda menores */
+        align-items: center;
+        gap: 10px; /* Espaço menor entre os itens */
+    }
+}
+
 
 .profile-card {
     background: #efeded;
