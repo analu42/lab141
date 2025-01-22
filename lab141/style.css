@@ -196,6 +196,25 @@ nav.topo{
     width: 56.2vw;
 }
 
+/* Ajustes para telas menores (ex.: celulares) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 12vw; /* Aumenta o tamanho relativo em telas menores */
+        text-align: left; /* Centraliza o texto */
+        width: 90%; /* Ajusta a largura para caber melhor */
+        margin: 0; 
+    }
+}
+
+/* Ajustes para telas muito pequenas (ex.: celulares antigos) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 12vw; /* Fonte ainda maior para leitura */
+        text-align: left; /* Mantém o texto centralizado */
+        width: 100%; /* O texto ocupa toda a largura */
+    }
+}
+
 .title2{
     color: rgb(233, 229, 229);
     font-family: "Bebas Neue", serif;
@@ -242,6 +261,26 @@ nav.topo{
     text-align: left;
     padding-left: 0.1em;
     padding-bottom: 1em;
+}
+
+/* Ajustes para tablets e dispositivos menores */
+@media (max-width: 768px) {
+    .main-text {
+        width: 80%; /* Aumenta a largura para ocupar mais espaço */
+        font-size: 4vw; /* Fonte maior para leitura em telas menores */
+        text-align: left; /* Centraliza o texto */
+        margin: 0; /* Centraliza o bloco */
+    }
+}
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+    .main-text {
+        width: 90%; /* Quase toda a largura da tela */
+        font-size: 5vw; /* Fonte maior ainda para legibilidade */
+        padding-top: 1em; /* Ajusta o espaçamento superior */
+        text-align: left; /* Centraliza o texto */
+    }
 }
 
 footer{
@@ -492,6 +531,25 @@ input:focus {
     margin-top:1vw;
 }
 
+/* Ajustes para tablets e dispositivos menores */
+@media (max-width: 768px) {
+    .order-button {
+        font-size: 3vw; /* Fonte maior para telas menores */
+        width: 60%; /* Reduz a largura proporcional */
+        padding: 12px 18px; /* Ajusta o espaçamento interno */
+    }
+}
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+    .order-button {
+        font-size: 4vw; /* Ainda maior para melhor leitura */
+        width: 60%; /* O botão ocupa quase toda a largura da tela */
+        padding: 12px 18px; /* Ajusta o espaçamento interno */
+
+    }
+}
+
 .center{
     text-align: center;
     display: flex;
@@ -636,10 +694,5 @@ input:focus {
     #submenu-container .menu li a:hover {
         background-color: #f3d9d9;
     }
-
-    #subsubmenu {
-        
-    }
-    
 
 }
