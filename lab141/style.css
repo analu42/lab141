@@ -551,3 +551,65 @@ input:focus {
     height: 100%;
     object-fit: cover;
 }
+
+
+/*responsividade menu lateral*/
+.menu {
+    display: flex;
+    list-style: none;
+    background-color: transparent;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    nav.topo {
+        display: flex;
+        align-items: center; /* Centraliza verticalmente os itens */
+        justify-content: space-between; /* Espaço entre logo e menu */
+        position: relative;
+        height: 60px; /* Altura fixa para a navbar */
+        background-color: #fce8e3; /* Cor de fundo da navbar */
+        padding: 0 15px; /* Espaçamento horizontal */
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+
+    .menu-icon {
+        display: flex;
+        padding-left: 75%;
+        padding-right: 5%;
+        cursor: pointer; /* Adiciona um cursor de pointer ao ícone */
+    }
+
+    .menu.open {
+        display: flex;
+    }
+}
