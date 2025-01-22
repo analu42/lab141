@@ -9,7 +9,7 @@
 
 
 body {
-font-family: Arial, sans-serif;
+font-family: 'Montserrat', serif;
 background-color: rgb(238, 36, 36);
 color: white;
 text-align: center;
@@ -120,6 +120,7 @@ th{
 
   header h1 {
       font-size: 1em; /* Reduz tamanho do título principal */
+      font-family: 'Montserrat', serif;
   }
 
   footer p {
