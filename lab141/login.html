@@ -4,30 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo141.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!--menu superior-->
-    <div class="topo">
+    <nav class="topo">
 
         <!--logo-->
         <div class="hover-container">
             <p class="hover-text">lab141</p>
-            <img src="imgs/lab1413d.png" alt="lab141 3d" class="hover-image">
+            <a href="index.html"><img src="imgs/lab1413d.png" alt="lab141 3d" class="hover-image"></a>
         </div>
+        
+        <div class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
 
-        <a href="login.html">
-            <button class="icon">
-                    <i class="fa-regular fa-circle-user"></i>
-            </button>
-        </a>
-    </div>
+        <div id="submenu-container">
+            <ul id="submenu" class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#services">Serviços</a>
+                    <ul id="subsubmenu" class="submenu" >
+                        <li><a href="tableorder.html">Modelagem</a></li>
+                        <li><a href="#impressao">Impressão 3D</a></li>
+                        <li><a href="Catálogo141/main.html">Catálogo</a></li>
+                        <li><a href="#consultoria">Fale Conosco</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+                    
+    </nav>
 
     <div class="login-container">
         <form class="login-form" action="#" method="POST">

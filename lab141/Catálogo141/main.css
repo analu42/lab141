@@ -1,15 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    font-weight: 550;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color:  #d13232;
 }
 
 header {
-    background-color: rgb(230, 74, 74);
     color: white;
-    padding: 1px 10px;
-    text-align: center;
+    margin: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 12vw; /* Ajuste o valor conforme a altura desejada */
+}
+
+
+
+nav.topo{
+    padding: 10px 0px 42px 50px;
+    background-color: rgba(250, 249, 243, 0.9); 
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-weight: bold;
+    color: #d13232;
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos nas extremidades */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+h1{
+    margin-bottom: 1.5vw;
+}
+
+.hover-container {
+    position: relative; /* Necessário para posicionar elementos filhos */
+    display: inline-block; /* Ajusta-se ao tamanho do conteúdo */
+    height: 100%;
+    background-color: transparent;
+    align-items: center;
+  }
+  
+  .hover-text {
+    font-size: 2em;
+    color: rgb(230, 17, 17);
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: "Bebas Neue", serif;
+    font-weight: bolder;
+  }
+
+  .hover-image {
+    display: none; /* A imagem está inicialmente oculta */
+    position: absolute; /* Sobrepõe o texto no mesmo local */
+    top: 0;
+    left: -30%;
+    width: 150%; /* Ajusta-se ao tamanho do contêiner */
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Quando o mouse passa sobre o contêiner */
+  .hover-container:hover .hover-text {
+    opacity: 0; /* Torna o texto invisível */
+  }
+  
+  .hover-container:hover .hover-image {
+    display: block; /* Mostra a imagem */
+    
+  }
+
+a {
+    color: #f5f2f2; /* Altere 'black' para a cor desejada */
+    text-decoration: none; /* Remove o sublinhado */
+    background-color: transparent;
+}
+
+a:hover {
+    color: rgb(137, 23, 23); /* Cor ao passar o mouse */
+}
+
+/* Menu principal */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 2.4vw;
+}
+
+ul li {
+    position: relative; /* Necessário para o posicionamento do submenu */
+}
+
+ul li a {
+    display: block;
+    padding: 0em 1.5em;
+    text-decoration: none;
+    color: #d41e1e;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    line-height: normal;
+}
+
+/* Cor de fundo ao passar o mouse */
+ul li a:hover {
+    background-color: transparent;
+}
+
+.dropdown {
+    position: relative; /* Necessário para o submenu */
+}
+
+.dropdown:hover .submenu {
+    display: block; /* Mostra o submenu ao passar o mouse */
+}
+
+.submenu {
+    display: none; /* Esconde o submenu por padrão */
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%; /* Posiciona abaixo do menu principal */
+    left: 0;
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.submenu li a:hover {
+    background-color: #f2f2f2;
+    color: #d41e1e;
+}
+
+.logo img{
+    color: white;
+    width: 12em;
 }
 
 .catalogo {
@@ -30,7 +178,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
+    height: 100%;
     padding: 15px;
 }
 
@@ -51,7 +199,7 @@ header {
 
 .produto h3 {
     font-size: 1.2rem;
-    margin: 10px 0 5px 0;
+    margin: 1vw 0 1vw 0;
 }
 
 .produto p {
@@ -64,7 +212,7 @@ header {
     color: #eb5848;
     font-weight: bold;
     font-size: 1.1rem;
-    margin-bottom: 0px;
+    margin-bottom: 1.5vw;
 }
 
 .produto button {
@@ -92,4 +240,82 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+/* Estilos para o botão de carrinho */
+.cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #eb5848;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 27px;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.cart-btn:hover {
+    background-color: #d44c3f;
+}
+
+.cart-btn i {
+    font-size: 20px;
+}
+
+.carrinho {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância da parte inferior da janela */
+    right: 20px; /* Distância da lateral direita */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão, igual à largura para ser redondo */
+    background-color: #dc2f2f; /* Cor de fundo do botão */
+    color: rgb(255, 255, 255); /* Cor do ícone ou texto */
+    border: none; /* Remove bordas */
+    border-radius: 50%; /* Torna o botão redondo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.248); /* Adiciona sombra para destacar */
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    transition: transform 0.2s ease; /* Adiciona efeito ao interagir */
+    font-size:1.5em;
+}
+
+/* Efeito ao passar o mouse */
+.cart-button:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+}
+
+/* Efeito ao clicar */
+.cart-button:active {
+    transform: scale(0.9); /* Reduz ligeiramente o botão */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    ul {
+        flex-direction: column; /* Alinha o menu verticalmente */
+    }
+
+    ul li {
+        width: 100%; /* Faz com que cada item ocupe a largura total */
+    }
+
+    ul li a {
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .submenu {
+        position: static; /* Remove a posição absoluta */
+        box-shadow: none; /* Remove a sombra */
+    }
+
+    .submenu li a {
+        text-align: center; /* Centraliza os itens do submenu */
+    }
 }

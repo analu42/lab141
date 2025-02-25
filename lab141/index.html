@@ -14,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,32 +27,33 @@
         </a>
     </button>
 
-    <div class="content">
+    <div class="content ">
 
         <!--menu superior-->
         <nav class="topo">
 
             <!--logo-->
-            <div>
-                <div class="hover-container">
+            <div class="hover-container">
                 <p class="hover-text">lab141</p>
                 <img src="imgs/lab1413d.png" alt="lab141 3d" class="hover-image">
             </div>
             
-            <div>
-                <ul>
+            <div class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+
+            <div id="submenu-container">
+                <ul id="submenu" class="menu">
                     <li><a href="#home">Home</a></li>
-                    <li class="dropdown">
+                    <li>
                         <a href="#services">Serviços</a>
-                        <ul class="submenu">
-                            <li><a href="#design">Design</a></li>
+                        <ul id="subsubmenu" class="submenu" >
+                            <li><a href="tableorder.html">Modelagem</a></li>
                             <li><a href="#impressao">Impressão 3D</a></li>
-                            <li><a href="#consultoria">Consultoria</a></li>
+                            <li><a href="Catálogo141/main.html">Catálogo</a></li>
+                            <li><a href="#consultoria">Fale Conosco</a></li>
                         </ul>
                     </li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                    
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </div>
                         
@@ -63,7 +64,7 @@
 
                 <div class="hero">
 
-                    <p class="title">Traga suas ideias para <br> o mundo tridimensional!</p>
+                    <p class="title">Traga suas ideias para o mundo tridimensional!</p>
                     
                     <p class="main-text">
     
@@ -72,9 +73,12 @@
                     </p> 
 
                     <div>
-                        <button class="order-button">
-                            Faça seu pedido!
-                        </button>
+                        <a href="tableorder.html">
+                            <button class="order-button">
+                                Faça seu pedido!
+                            </button>    
+                        </a> 
+                        
                     </div>
                         
                     
@@ -88,12 +92,67 @@
 
             </div>
 
-            <div class="white-box">admankkfa</div>
+            <div class="white-box" id="sobre">
+                
+                <h3><i class="fa-solid fa-caret-right" style="color: #d41e1e;"></i> O Lab141</h3>
+                <h4>
+                    No início de 2024, Analu, Malu e Luís Guilherme criaram o <u>Lab 141</u>, uma startup de impressão 3D e fabricação digital em terras potiguares.
+
+                    Por meio da experiência de quase 2 anos no mundo maker como membros do laboratório n°140 do IFRN Campus Canguaretama, o FabLab PotiMaker, o Lab 141 é o próximo passo na vida profissional de seus criadores, no qual objetivam aplicar seus conhecimentos adquiridos durante esse tempo para trazer sonhos à realidade!
+                </h4>
+            
+            </div>
+
+            <div>
+                <div class="center">
+                    <div class="title2">
+                        Nossa Equipe
+                    </div> 
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-picture">
+                            <img src="imgs/analu.jpg" alt="Perfil">
+                        </div>
+                        <h3>Analu</h3>
+                        <p>:D</p>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-picture">
+                            <img src="imgs/malu.jpg" alt="Perfil">
+                        </div>
+                        <h3>Malu</h3>
+                        <p>★</p>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-picture">
+                            <img src="imgs/luis.jpg" alt="Perfil">
+                        </div>
+                        <h3>Luís G.</h3>
+                        <p>?<br><br></p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
         
-        <footer></footer>
+        <footer id="consultoria">
+            <div class="footer-container">
+                <div class="footer-section contact">
+                    <h3>Contato</h3>
+                    <p class="center"><i class="fa fa-phone"> </i> +55 (84) 9916-3713</p>
+                    <p class="center"><i class="fa fa-envelope"> </i> lab1quatro1@gmail.com</p>
+                    <p class="center"><i class="fa-brands fa-instagram"> </i> @lab_141</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <br><br><br>
+                <p class="center" style="color: rgb(229, 50, 50);">&copy; 2025 Lab141. Todos os direitos reservados.</p>
+                <br><br><br><br>
+            </div>
+        </footer>
 
     </div>
 

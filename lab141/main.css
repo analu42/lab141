@@ -1,0 +1,376 @@
+body {
+    background-color:  rgb(137, 23, 23);
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    font-weight: 550;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Reseta margens, padding e define box-sizing global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+  font-weight: 550;
+}
+
+i {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background-color: transparent;
+}
+
+a {
+  color: #f5f2f2;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: rgb(137, 23, 23);
+}
+
+/* Menu principal */
+nav.topo {
+  padding: 10px 0px 42px 50px;
+  background-color: rgba(250, 249, 243, 0.9);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  font-weight: bold;
+  color: #d13232;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo do logo */
+.hover-container {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  align-items: center;
+}
+
+.hover-text {
+  font-size: 2em;
+  color: rgb(230, 17, 17);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: "Bebas Neue", serif;
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+
+.hover-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 150%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hover-container:hover .hover-text {
+  color: #dc2f2f;
+}
+
+.hover-container:hover .hover-image {
+  transform: scale(1.1); /* Efeito de aumento da imagem */
+}
+
+/* Menu de navegação */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 2.4vw;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 0em 1.5em;
+  text-decoration: none;
+  color: #d41e1e;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  line-height: normal;
+}
+
+ul li a:hover {
+  background-color: transparent;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f3f1f1;
+  padding: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.submenu li {
+  width: 200px;
+}
+
+.submenu li a {
+  color: #333;
+  padding: 0.8em 1em;
+  font-size: 0.9em;
+}
+
+.submenu li a:hover {
+  background-color: #ebdcdc;
+}
+
+ul li:hover .submenu {
+  display: block;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  ul {
+      flex-direction: column;
+  }
+
+  ul li {
+      width: 100%;
+  }
+
+  ul li a {
+      text-align: center;
+  }
+
+  .submenu {
+      position: static;
+      box-shadow: none;
+  }
+
+  .submenu li a {
+      text-align: center;
+  }
+}
+
+/* Estilo adicional */
+.white-box {
+  background-color: #ebdcdc;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5em;
+}
+
+.carrinho {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #dc2f2f;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+  font-size: 1.5em;
+}
+
+.cart-button:hover {
+  transform: scale(1.1);
+}
+
+.cart-button:active {
+  transform: scale(0.9);
+}
+
+/* Estilo da hero section */
+.hero {
+  padding-top: 12em;
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 0.35em;
+  z-index: 1000;
+  font-size: 2em;
+  color: #d13232;
+  background-color: rgba(255, 255, 255, 0.01);
+  border: none;
+  border-radius: 100%;
+  display: flex;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.title {
+  color: rgb(233, 229, 229);
+  font-family: "Bebas Neue", serif;
+  font-weight: bolder;
+  font-size: 7vw;
+  text-align: left;
+  margin: none;
+  padding-top: 0em;
+  padding-bottom: 0;
+  line-height: 1;
+  width: 56.2vw;
+}
+
+.title2 {
+  color: rgb(233, 229, 229);
+  font-family: "Bebas Neue", serif;
+  font-weight: bolder;
+  font-size: 7vw;
+  margin: none;
+  padding-top: 0em;
+  padding-bottom: 0;
+  line-height: 1;
+  width: 56.2vw;
+}
+
+#p5-container {
+  display: block;
+  margin-top: 2em;
+  margin-left: 0;
+  text-align: center;
+  width: auto;
+}
+
+.logo img {
+  color: white;
+  width: 12em;
+}
+
+.conteudo-principal {
+  padding-left: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2em;
+}
+
+.main-text {
+  width: 50vw;
+  font-size: 1.5vw;
+  color: rgb(234, 227, 227);
+  font-weight: lighter;
+  padding-top: 1.5vw;
+  text-align: left;
+  padding-left: 0.1em;
+  padding-bottom: 1em;
+}
+
+footer {
+  height: end;
+  width: 100%;
+  background-color: rgb(235, 223, 223);
+  position: relative;
+  z-index: 10;
+}
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+  
+    /* Retângulo branco com bordas arredondadas */
+    .container {
+      background-color: white;
+      border-radius: 15px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+      padding: 20px;
+      max-width: 700px;
+      width: 100%;
+      margin-top: 4vw;
+    }
+  
+    /* Estilização das seções internas */
+    .section {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-bottom: 1px solid #e0e0e0; /* Linha de separação */
+    }
+  
+    .section:last-child {
+      border-bottom: none; /* Remove a linha da última seção */
+    }
+  
+    /* Estilização dos produtos */
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 8px; /* Bordas arredondadas dos produtos */
+    }
+  
+    .product button {
+      background-color: #dc2f2f;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .product button:hover {
+      background-color: rgb(137, 23, 23);;
+    }
+  
+    /* Estilização do carrinho */
+    .cart .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+  
+    .total {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: right;
+    }
+  
+    /* Estilização do método de pagamento */
+    .payment-method input {
+      margin-right: 5px;
+    }
+  
+    .hidden {
+      display: none;
+    }
+  
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #dc2f2f; /* Cor de fundo do botão */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
