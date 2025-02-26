@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        ul li {
+            display: inline;
+            margin: 10px;
+        }
+        ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #007bff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+        }
+        ul li a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #b3d9ff;
+        }
+        input:focus {
+            background-color: yellow;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function validarFormulario() {
+            let inputs = document.querySelectorAll("input");
+            for (let input of inputs) {
+                if (input.value.trim() === "") {
+                    alert("Por favor, preencha todos os campos.");
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+        function adicionarLinha() {
+            let tabela = document.querySelector("table");
+            let novaLinha = tabela.insertRow();
+            novaLinha.innerHTML = `<td>4</td><td>Nome Exemplo</td><td>exemplo@email.com</td>
+                                  <td><button onclick="alterarLinha(this)">Alterar</button>
+                                  <button onclick="excluirLinha(this)">Excluir</button></td>`;
+        }
+        
+        function alterarLinha(botao) {
+            let linha = botao.parentNode.parentNode;
+            let nome = prompt("Digite o novo nome:", linha.cells[1].innerText);
+            let email = prompt("Digite o novo email:", linha.cells[2].innerText);
+            if (nome && email) {
+                linha.cells[1].innerText = nome;
+                linha.cells[2].innerText = email;
+            }
+        }
+        
+        function excluirLinha(botao) {
+            if (confirm("Deseja realmente excluir esta linha?")) {
+                let linha = botao.parentNode.parentNode;
+                linha.parentNode.removeChild(linha);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Área do Usuário</h2>
+    <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="usuarios.html">Formulário de Usuários</a></li>
+        <li><a href="produtos.html">Formulário de Produtos</a></li>
+    </ul>
+
+    <h2>Listagem de Dados</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>João Silva</td>
+            <td>joao@email.com</td>
+            <td>
+                <button onclick="alterarLinha(this)">Alterar</button>
+                <button onclick="excluirLinha(this)">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Maria Oliveira</td>
+            <td>maria@email.com</td>
+            <td>
+                <button onclick="alterarLinha(this)">Alterar</button>
+                <button onclick="excluirLinha(this)">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Carlos Souza</td>
+            <td>carlos@email.com</td>
+            <td>
+                <button onclick="alterarLinha(this)">Alterar</button>
+                <button onclick="excluirLinha(this)">Excluir</button>
+            </td>
+        </tr>
+    </table>
+    <button onclick="adicionarLinha()">Cadastrar</button>
+    
+</body>
+
+</html>
