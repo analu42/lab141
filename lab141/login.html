@@ -14,6 +14,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function validarLogin(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            
+            let user = document.getElementById("username");
+            let senha = document.getElementById("password");
+            let mensagemErro = document.getElementById("mensagemErro");
+            mensagemErro.innerHTML = "";
+
+            if (user.value.trim() === "" || senha.value.trim() === "") {
+                mensagemErro.innerHTML = "Todos os campos são obrigatórios.";
+                return;
+            }
+
+            if (senha.value.length < 6) {
+                mensagemErro.innerHTML = "A senha deve ter pelo menos 6 caracteres.";
+                return;
+            }
+
+            alert("Login bem-sucedido!");
+        }
+
+        function destacarInput(event) {
+            event.target.style.border = "2px solid blue";
+        }
+
+        function removerDestaque(event) {
+            event.target.style.border = "";
+        }
+    </script>
 </head>
 <body>
 
@@ -48,21 +78,25 @@
     </nav>
 
     <div class="login-container">
-        <form class="login-form" action="#" method="POST">
+        <form class="login-form" action="#" method="POST" onsubmit="validarLogin(event)">
             <h2>Login</h2>
+            
             <div class="form-group">
                 <label for="username">User</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <input type="text" id="username" name="username" placeholder="Enter your username" onfocus="destacarInput(event)" onblur="removerDestaque(event)">
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" onfocus="destacarInput(event)" onblur="removerDestaque(event)">
             </div>
             <button type="submit" class="login-button">Entrar</button>
             <p class="signup-text">
-                Não tem uma conta? <a href="#">Cadastre-se</a>
+                Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
             </p>
+            <br>
+            <p id="mensagemErro" style="color: rgb(248, 49, 49);"></p>
         </form>
+        
     </div>
 </body>
 </html>

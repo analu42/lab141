@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Usuários</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function carregarTabela() {
+            let tabela = JSON.parse(localStorage.getItem("usuarios")) || [];
+            let tabelaElement = document.getElementById("tabelaCadastro");
+            let tbody = tabelaElement.querySelector("tbody");
+
+            // Limpa a tabela
+            tbody.innerHTML = "";
+
+            // Preenche a tabela com os dados
+            tabela.forEach(usuario => {
+                let novaLinha = tbody.insertRow();
+
+                novaLinha.insertCell(0).textContent = usuario.username;
+                novaLinha.insertCell(1).textContent = usuario.email;
+                novaLinha.insertCell(2).textContent = usuario.senha;
+            });
+        }
+
+        window.onload = carregarTabela;
+    </script>
+</head>
+<body>
+
+    <h2>Usuários Cadastrados</h2>
+    <table id="tabelaCadastro" border="1">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>E-mail</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- A tabela será preenchida com dados do LocalStorage -->
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="icon" href="logo141.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let tabela = [];
+
+        function validarLogin(event, acao) {
+            event.preventDefault(); // Evita o envio do formulário
+            
+            let user = document.getElementById("username");
+            let email = document.getElementById("email");
+            let senha = document.getElementById("password");
+            let mensagemErro = document.getElementById("mensagemErro");
+            mensagemErro.innerHTML = "";
+
+            if (user.value.trim() === "" || senha.value.trim() === "") {
+                mensagemErro.innerHTML = "Todos os campos são obrigatórios.";
+                return;
+            }
+
+            if (senha.value.length < 6) {
+                mensagemErro.innerHTML = "A senha deve ter pelo menos 6 caracteres.";
+                return;
+            }
+
+            // Ação com base no botão pressionado (Cadastrar, Alterar, Excluir)
+            if (acao === "cadastrar") {
+                alert("Cadastro bem-sucedido!");
+
+                // Adiciona os dados à tabela
+                adicionarNaTabela(user.value, email.value, senha.value);
+
+                // Limpar os campos de entrada após a ação
+                user.value = "";
+                email.value = "";
+                senha.value = "";
+            } else if (acao === "alterar") {
+                alert("Alteração bem-sucedida!");
+            } else if (acao === "excluir") {
+                alert("Usuário excluído com sucesso!");
+                // Exclui o usuário da tabela
+                excluirUsuario();
+            }
+        }
+
+        function adicionarNaTabela(username, email, senha) {
+            // Cria a nova linha com os dados
+            tabela.push({ username, email, senha });
+            atualizarTabela();
+        }
+
+        function excluirUsuario() {
+            let username = document.getElementById("username").value;
+
+            // Encontra o usuário na tabela com o mesmo nome
+            for (let i = 0; i < tabela.length; i++) {
+                if (tabela[i].username === username) {
+                    tabela.splice(i, 1); // Remove o usuário da tabela
+                    break;
+                }
+            }
+
+            atualizarTabela();
+        }
+
+        function atualizarTabela() {
+            let tabelaElement = document.getElementById("tabelaCadastro");
+            let tbody = tabelaElement.querySelector("tbody");
+
+            // Limpa a tabela
+            tbody.innerHTML = "";
+
+            // Preenche a tabela com os dados atuais
+            tabela.forEach((usuario) => {
+                let novaLinha = tbody.insertRow();
+
+                novaLinha.insertCell(0).textContent = usuario.username;
+                novaLinha.insertCell(1).textContent = usuario.email;
+                novaLinha.insertCell(2).textContent = usuario.senha;
+            });
+        }
+
+        function destacarInput(event) {
+            event.target.style.border = "2px solid blue";
+        }
+
+        function removerDestaque(event) {
+            event.target.style.border = "";
+        }
+    </script>
+</head>
+<body>
+
+    <!--menu superior-->
+    <nav class="topo">
+
+        <!--logo-->
+        <div class="hover-container">
+            <p class="hover-text">lab141</p>
+            <a href="index.html"><img src="imgs/lab1413d.png" alt="lab141 3d" class="hover-image"></a>
+        </div>
+        
+        <div class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+
+        <div id="submenu-container">
+            <ul id="submenu" class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#services">Serviços</a>
+                    <ul id="subsubmenu" class="submenu" >
+                        <li><a href="tableorder.html">Modelagem</a></li>
+                        <li><a href="#impressao">Impressão 3D</a></li>
+                        <li><a href="Catálogo141/main.html">Catálogo</a></li>
+                        <li><a href="#consultoria">Fale Conosco</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+                    
+    </nav>
+
+    <div class="login-container">
+        <form class="login-form" action="#" method="POST">
+            <h2>Cadastro</h2>
+            
+            <div class="form-group">
+                <label for="username">User</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" onfocus="destacarInput(event)" onblur="removerDestaque(event)">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" onfocus="destacarInput(event)" onblur="removerDestaque(event)">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" onfocus="destacarInput(event)" onblur="removerDestaque(event)">
+            </div>
+            
+            <!-- Botões de ação -->
+            <button type="button" class="login-button" onclick="validarLogin(event, 'cadastrar')">Cadastrar</button>
+            <br>
+            <br>
+            <button type="button" class="login-button" onclick="validarLogin(event, 'alterar')">Alterar</button>
+            <br>
+            <br>
+            <button type="button" class="login-button" onclick="validarLogin(event, 'excluir')">Excluir</button>
+
+            <br>
+            <br>
+            <p id="mensagemErro" style="color: rgb(248, 49, 49);"></p>
+        </form>
+        
+    </div>
+
+    <!-- Tabela para exibir os dados -->
+    <h5>Usuários Cadastrados</h5>
+    <table id="tabelaCadastro" border="1">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>E-mail</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As novas linhas serão inseridas aqui -->
+        </tbody>
+    </table>
+    
+</body>
+</html>

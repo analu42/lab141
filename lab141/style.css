@@ -453,6 +453,13 @@ h4{
     padding-bottom: 6vw;
 }
 
+h5 {
+    color: #e1d0d0;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: "Bebas Neue", serif;
+}
+
 
 .form-group {
     margin-bottom: 15px;
