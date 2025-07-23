@@ -6,3 +6,7 @@ def index(request):
 
 def manoel(request):
     return render(request, 'manoel.html')
+
+
+def perfil(request):
+    return render(request, 'perfil.html')    
