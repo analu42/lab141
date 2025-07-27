@@ -4,12 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" href="{% static 'style.css' %}">
     <title>Lab141</title>
 </head>
 <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- navbar >>> aplica estilo de barra de navegação. -->
+    <!-- navbar-expand-lg >>> expande na horizontal em telas grandes, vira botão em telas pequenas. -->
+    <!-- bg-body-tertiary >>> cor padrão -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- navbar-nav >>> estilizar link -->
+        <!-- ms-auto >>> margem esquerda automática -->
+        <!-- mb-2 mb-lg-0 >>> margem inferior dos links -->
+        <li class="nav-item">
+          <!-- nav-item >>> estilizando item -->
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <!-- nav-link >>> estilizando link -->
+           <!-- active >>> link ativo -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">catalogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">carrinho</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-dark">entrar</button>
+          <!-- btn btn-dark >>> botão preto bootstrap -->
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
     <p><a href="{% url 'perfil'%}">perfil</a></p>
-    wow 
-    daora né
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </html>
