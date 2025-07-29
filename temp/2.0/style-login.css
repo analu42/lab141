@@ -1,0 +1,13 @@
+main{
+    .c{
+        h1{
+            color: white;
+        }
+        background-color: #413E42;
+        border-radius: 0% 44% 44% 0%;
+        height: 90vh;
+    }
+    .b{
+        height: 90vh;
+    }
+}
