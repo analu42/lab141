@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Lab141</title>
 </head>
@@ -11,7 +12,7 @@
       <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand fs-6 fw-semibold" href="#">
-        <img id="logo" src="#" alt="Logo" width="60" height="60" class="me-1">
+        <img id="logo" src="{% static 'logo.png' %}" alt="Logo" width="60" height="60" class="me-1">
         Lab141
       </a>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -39,6 +40,8 @@
       </ul>
     </div>
   </nav>
+  
+    <p><a href="{% url 'perfil'%}">perfil</a></p>
    
     <h1 class="mt-5 ms-5 fw-bold">Traga suas ideias para o mundo tridimensional!</h1>
     <script>
