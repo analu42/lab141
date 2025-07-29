@@ -9,7 +9,7 @@
     <title>Lab141</title>
 </head>
 <body>
-      <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand fs-6 fw-semibold" href="#">
         <img id="logo" src="{% static 'logo.png' %}" alt="Logo" width="60" height="60" class="me-1">
@@ -40,15 +40,19 @@
       </ul>
     </div>
   </nav>
-  
-    <p><a href="{% url 'perfil'%}">perfil</a></p>
-   
-    <h1 class="mt-5 ms-5 fw-bold">Traga suas ideias para o mundo tridimensional!</h1>
+    <h2 class="mt-5 ms-5 fw-bold display-3">Traga suas ideias para o mundo tridimensional!</h2>
+    <h4 class=" ms-5 fw-normal">Através da tecnologia de impressão 3D, no Lab141 suas ideias estão apenas a um pedido de distância.</h4>
+    <h4 class="nav-item ms-5">
+      <button type="button" class="btn btn-dark">Faça seu pedido</button>
+    </h4>
     <script>
       const toggleButton = document.getElementById('themeToggle');
       const icon = toggleButton.querySelector('i');
       const navbar = document.getElementById('mainNavbar');
       const logo = document.getElementById('logo'); // logo
+      window.onload = () => {
+        document.body.style.zoom = '115%';
+      }
 
       toggleButton.addEventListener('click', () => {
         const darkMode = !document.body.classList.contains('bg-dark');
@@ -57,22 +61,25 @@
         document.body.classList.toggle('bg-dark', darkMode);
         document.body.classList.toggle('text-light', darkMode);
 
+
         // Alterna classes na navbar e troca a logo
         if (darkMode) {
-          navbar.classList.remove('navbar-light', 'bg-light');
+          navbar.classList.remove('navbar-light', 'bg-body-secondary');
           navbar.classList.add('navbar-dark', 'bg-dark');
           icon.classList.replace('bi-moon', 'bi-sun');
           icon.classList.add('text-white'); 
           logo.src = "{% static 'logo-light.png' %}";
         } else {
           navbar.classList.remove('navbar-dark', 'bg-dark');
-          navbar.classList.add('navbar-light', 'bg-light');
+          navbar.classList.add('navbar-light', 'bg-body-secondary');
           icon.classList.replace('bi-sun', 'bi-moon');
           logo.src = "{% static 'logo.png' %}";
         }
       });
     </script>
+  <footer class="bg-dark text-">
 
+  </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </html>
