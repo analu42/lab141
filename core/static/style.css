@@ -1,4 +1,11 @@
-h1{
-    color: blue;
-    font-size:200;
+
+
+.dedos{
+    background-image:  url("/static/dedos.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.padt {
+    padding-top: 20%;
 }
