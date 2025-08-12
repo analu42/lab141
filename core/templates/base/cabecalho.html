@@ -30,13 +30,14 @@
       </ul>
     </div>
   </nav>
-
-  <h1 class="mt-5 ms-5 fw-bold">Traga suas ideias para o mundo tridimensional!</h1>
   <script>
     const toggleButton = document.getElementById('themeToggle');
     const icon = toggleButton.querySelector('i');
     const navbar = document.getElementById('mainNavbar');
     const logo = document.getElementById('logo'); // logo
+    window.onload = () => {
+      document.body.style.zoom = '115%';
+    }
 
     toggleButton.addEventListener('click', () => {
       const darkMode = !document.body.classList.contains('bg-dark');
@@ -45,18 +46,18 @@
       document.body.classList.toggle('bg-dark', darkMode);
       document.body.classList.toggle('text-light', darkMode);
 
+
       // Alterna classes na navbar e troca a logo
       if (darkMode) {
-        navbar.classList.remove('navbar-light', 'bg-light');
+        navbar.classList.remove('navbar-light', 'bg-body-secondary');
         navbar.classList.add('navbar-dark', 'bg-dark');
         icon.classList.replace('bi-moon', 'bi-sun');
         icon.classList.add('text-white');
         logo.src = "{% static 'logo-light.png' %}";
       } else {
         navbar.classList.remove('navbar-dark', 'bg-dark');
-        navbar.classList.add('navbar-light', 'bg-light');
+        navbar.classList.add('navbar-light', 'bg-body-secondary');
         icon.classList.replace('bi-sun', 'bi-moon');
-        icon.classList.remove('text-white');
         logo.src = "{% static 'logo.png' %}";
       }
     });
