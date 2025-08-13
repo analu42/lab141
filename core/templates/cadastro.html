@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style-cadastro.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Lab141 - Criar Conta</title>
+
+</head>
+
+<body>
+    {% include './base/cabecalho.html' %}
+
+    {% block conteudo %}
+
+    {% endblock %}
+    <!-- Formulário -->
+    <div class="container">
+        <h2>Criar conta</h2>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Número" required>
+            <input type="text" placeholder="CPF" required>
+            <input type="password" placeholder="Senha" required>
+            <input type="password" placeholder="Confirme a senha" required>
+            <div class="full-width">
+                <button type="submit" class="btn-submit">Cadastrar</button>
+            </div>
+        </form>
+        <p class="link-login">Já possui cadastro? <a href="#">Entre aqui.</a></p>
+    </div>
+
+</body>
+
+</html>
