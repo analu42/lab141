@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="{% static 'logo-light.png' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style-catalogo.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Lab141 - Catálogo</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  {% include './base/cabecalho.html' %}
+
+  <h1 class="titulo">Catálogo</h1>
+
+  <section class="catalogo">
+    <div class="item">
+      <img src="{% static 'img/dragao.jpg' %}" alt="Dragão">
+      <h3>Dragão</h3>
+      <p>R$ 53,90</p>
+    </div>
+    <div class="item">
+      <img src="{% static 'img/engrenagens.jpg' %}" alt="Engrenagens">
+      <h3>Engrenagens</h3>
+      <p>R$ 15,00</p>
+    </div>
+    <div class="item">
+      <img src="{% static 'img/charmander.jpg' %}" alt="Charmander">
+      <h3>Charmander</h3>
+      <p>R$ 45,85</p>
+    </div>
+    <div class="item">
+      <img src="{% static 'img/planta.jpg' %}" alt="Planta">
+      <h3>Planta</h3>
+      <p>R$ 25,00</p>
+    </div>
+    <div class="item">
+      <img src="{% static 'img/robo.jpg' %}" alt="Robô">
+      <h3>Robô</h3>
+      <p>R$ 60,00</p>
+    </div>
+    <div class="item">
+      <img src="{% static 'img/chuveiro.jpg' %}" alt="Chuveiro Flor">
+      <h3>Chuveiro Flor</h3>
+      <p>R$ 39,90</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div>
+      <h4>Catálogo</h4>
+      <p>Geek</p>
+      <p>Prototipagem</p>
+      <p>Casa</p>
+      <p>Chaveiros</p>
+      <p>Outros</p>
+    </div>
+    <div>
+      <h4>Links úteis</h4>
+      <p>Thingiverse</p>
+      <p>Blender</p>
+      <p>Tinkercad</p>
+      <p>Makerhero</p>
+      <p>Cult3D</p>
+    </div>
+    <div>
+      <h4>Nossos serviços</h4>
+      <p>Impressão 3D</p>
+      <p>Modelagem 3D</p>
+      <p>Galvanização</p>
+    </div>
+    <div>
+      <h4>Entre em contato</h4>
+      <p>(84) 9916 3713</p>
+      <p>lab1quarto1@gmail.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
