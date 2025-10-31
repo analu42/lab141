@@ -1,6 +1,6 @@
 from django.db import models
 
-class produto (models.Model):
+class Produto (models.Model):
     nome = models.CharField('Nome', 
                             max_length=50)
     preço = models.DecimalField('Preço', 
@@ -17,10 +17,10 @@ class produto (models.Model):
                                    decimal_places=2)
     imagen = models.ImageField('Imagem', 
                                upload_to='produtos/')
-    compra = models.ForeignKey('compra', 
+    compra = models.ForeignKey('Compra', 
                                on_delete=models.PROTECT)
 
-class cliente(models.Model):
+class Cliente(models.Model):
     nome = models.CharField('Nome', 
                             max_length=100)
     cpf = models.CharField('CPF', 
@@ -34,12 +34,10 @@ class cliente(models.Model):
     endereco = models.TextField('Endereço')
     senha = models.CharField('Senha', 
                              max_length=50)
-    compra = models.ForeignKey('compra', 
-                               on_delete=models.PROTECT)
     
-class compra(models.Model):
+class Compra(models.Model):
     data_da_compra = models.DateField('Data da Compra')
-    cliente = models.ForeignKey(cliente, 
+    cliente = models.ForeignKey(Cliente, 
                                 on_delete=models.PROTECT)
     
 # Create your models here.
