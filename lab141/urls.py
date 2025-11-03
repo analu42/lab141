@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import index, cadastro, carrinho, login, catalogo,cliente, compra, produto, cadastro_cliente, cadastro_compra,cadastro_produto, atualizar_cliente, atualizar_compra, atualizar_produto
+from core.views import index, cadastro, carrinho, login, catalogo,cliente, compra, produto, cadastro_cliente, cadastro_compra,cadastro_produto, atualizar_cliente, atualizar_compra, atualizar_produto, deletar_cliente, deletar_compra, deletar_produto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,4 +34,7 @@ urlpatterns = [
     path('atualizar_produto/<int:id>/', atualizar_produto, name='atualizar_produto'),
     path('atualizar_cliente/<str:cpf>/', atualizar_cliente, name='atualizar_cliente'),
     path('atualizar_compra/<int:id>/', atualizar_compra, name='atualizar_compra'),
+    path('deletar_cliente/<str:cpf>/', deletar_cliente, name='deletar_cliente'),
+    path('deletar_produto/<int:id>/', deletar_produto, name='deletar_produto'),
+    path('deletar_compra/<int:id>/', deletar_compra, name='deletar_compra'),
 ]

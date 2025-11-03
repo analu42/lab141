@@ -52,6 +52,11 @@ def atualizar_cliente(request, cpf):
 
     return render(request, 'cadastro_cliente.html',contexto)
 
+def deletar_cliente(request, cpf):
+    cliente = Cliente.objects.get(pk=cpf)
+    cliente.delete()
+    return redirect('cliente')
+
 def compra(request):
     compra = Compra.objects.all()
 
@@ -84,6 +89,11 @@ def atualizar_compra(request, id):
 
     return render(request, 'cadastro_compra.html',contexto)
 
+def deletar_compra(request, id):
+    compra = Compra.objects.get(pk=id)
+    compra.delete()
+    return redirect('compra')
+
 def produto(request):
     produto = Produto.objects.all()
 
@@ -115,3 +125,8 @@ def atualizar_produto(request, id):
     }
 
     return render(request, 'cadastro_produto.html',contexto)
+
+def deletar_produto(request, id):
+    produto = Produto.objects.get(pk=id)
+    produto.delete()
+    return redirect('produto')

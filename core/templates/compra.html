@@ -9,7 +9,7 @@
     <h1>Lista de Compra</h1>
     {% for compra in lista_compra %}
         <p>
-            {{compra.cliente}} <a href="{% url 'atualizar_compra' compra.id %}">EDITAR</a>
+            {{compra.cliente}} <a href="{% url 'atualizar_compra' compra.id %}">EDITAR</a> <a href="{% url 'deletar_compra' compra.id %}">DELETAR</a>
         </p>
     {% empty %}
         <p>Nenhum compra Feita</p>
