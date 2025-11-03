@@ -8,7 +8,9 @@
 <body>
     <h1>Lista de Produto</h1>
     {% for produto in lista_produto %}
-        <p>{{produto.nome}}</p>
+        <p>
+            {{produto.nome}} <a href="{% url 'atualizar_produto' produto.id %}">EDITAR</a>
+        </p>
     {% empty %}
         <p>Nenhum produto cadastrado</p>
     {% endfor %}

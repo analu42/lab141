@@ -15,8 +15,6 @@ class Produto (models.Model):
     profundidade = models.DecimalField('Profundidade', 
                                    max_digits=5, 
                                    decimal_places=2)
-    imagen = models.ImageField('Imagem', 
-                               upload_to='produtos/')
     compra = models.ForeignKey('Compra', 
                                on_delete=models.PROTECT)
 

@@ -40,6 +40,18 @@ def cadastro_cliente(request):
 
     return render(request, 'cadastro_cliente.html', contexto)
 
+def atualizar_cliente(request, cpf):
+    cliente = Cliente.objects.get(pk=cpf)
+    form = ClienteForm(request.POST or None, instance=cliente)
+    if form.is_valid():
+        form.save()
+        return redirect('cliente')
+    contexto = {
+        'form':form
+    }
+
+    return render(request, 'cadastro_cliente.html',contexto)
+
 def compra(request):
     compra = Compra.objects.all()
 
@@ -60,6 +72,18 @@ def cadastro_compra(request):
 
     return render(request, 'cadastro_compra.html', contexto)
 
+def atualizar_compra(request, id):
+    compra = Compra.objects.get(pk=id)
+    form = CompraForm(request.POST or None, instance=compra)
+    if form.is_valid():
+        form.save()
+        return redirect('compra')
+    contexto = {
+        'form':form,
+    }
+
+    return render(request, 'cadastro_compra.html',contexto)
+
 def produto(request):
     produto = Produto.objects.all()
 
@@ -71,6 +95,18 @@ def produto(request):
 
 def cadastro_produto(request):
     form = ProdutoForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('produto')
+    contexto = {
+        'form':form
+    }
+
+    return render(request, 'cadastro_produto.html',contexto)
+
+def atualizar_produto(request, id):
+    produto = Produto.objects.get(pk=id)
+    form = ProdutoForm(request.POST or None, instance=produto)
     if form.is_valid():
         form.save()
         return redirect('produto')

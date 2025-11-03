@@ -8,7 +8,9 @@
 <body>
     <h1>Lista de Cliente</h1>
     {% for cliente in lista_cliente %}
-        <p>{{cliente.nome}}</p>
+        <p>
+            {{cliente.nome}} <a href="{% url 'atualizar_cliente' cliente.cpf %}">EDITAR</a>
+        </p>
     {% empty %}
         <p>Nenhum cliente cadastrado</p>
     {% endfor %}
