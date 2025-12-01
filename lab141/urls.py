@@ -16,14 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import index, cadastro, carrinho, login, catalogo,cliente, compra, produto, cadastro_cliente, cadastro_compra,cadastro_produto, atualizar_cliente, atualizar_compra, atualizar_produto, deletar_cliente, deletar_compra, deletar_produto
+from core.views import index, cadastro, carrinho, login, catalogo,cliente, compra, produto, cadastro_cliente, cadastro_compra,cadastro_produto, atualizar_cliente, atualizar_compra, atualizar_produto, deletar_cliente, deletar_compra, deletar_produto, autenticacao, desconectar, registro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('cadastro/', cadastro, name='cadastro'),
     path('carrinho/', carrinho, name='carrinho'),
-    path('login/', login, name='login'),
     path('catalogo/', catalogo, name='catalogo'),
     path('cliente/', cliente, name='cliente'),
     path('compra/', compra, name='compra'),
@@ -37,4 +36,7 @@ urlpatterns = [
     path('deletar_cliente/<str:cpf>/', deletar_cliente, name='deletar_cliente'),
     path('deletar_produto/<int:id>/', deletar_produto, name='deletar_produto'),
     path('deletar_compra/<int:id>/', deletar_compra, name='deletar_compra'),
+    path('login/', autenticacao, name='login'),
+    path('desconectar/', desconectar, name='desconectar'),
+    path('registro/', registro, name='registro'),
 ]

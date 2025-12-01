@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 class Produto (models.Model):
     nome = models.CharField('Nome', 
@@ -39,3 +40,6 @@ class Compra(models.Model):
                                 on_delete=models.PROTECT)
     
 # Create your models here.
+class Usuario(AbstractUser):
+    cpf = models.CharField('CPF', max_length=11)
+    nome_completo =  models.CharField('Nome Completo', max_length=50)

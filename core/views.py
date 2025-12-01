@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Cliente, Compra, Produto
-from .forms import ClienteForm, CompraForm, ProdutoForm
+from .forms import ClienteForm, CompraForm, ProdutoForm, UsuarioForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def index(request):
@@ -11,9 +14,6 @@ def cadastro (request):
 
 def carrinho (request):
     return render(request, 'carrinho.html')
-
-def login (request):
-    return render(request, 'login.html')
 
 def catalogo (request):
     return render(request, 'catalogo.html')
@@ -130,3 +130,29 @@ def deletar_produto(request, id):
     produto = Produto.objects.get(pk=id)
     produto.delete()
     return redirect('produto')
+
+def autenticacao(request):
+    if request.POST:
+        usuario = request.POST.get('usuario')
+        senha = request.POST.get('senha')
+        user = authenticate(request, username=usuario, password=senha)
+        if user is not None:
+            login (request, user)
+            return redirect ('perfil')
+        else:
+            return render(request, 'login.html')
+    return render(request, 'login.html')
+
+def registro(request):
+    form = UsuarioForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
+    contexto = {
+        'form':form
+    }
+    return render(request, 'registro.html', contexto)
+
+def desconectar(request):
+    logout(request)
+    return redirect('index')
