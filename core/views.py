@@ -156,3 +156,7 @@ def registro(request):
 def desconectar(request):
     logout(request)
     return redirect('index')
+
+@login_required
+def perfil(request):
+    return render(request, 'perfil.html')
